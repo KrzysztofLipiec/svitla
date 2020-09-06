@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:ts": "node node_modules/typescript/bin/tsc -w"
+    "watch:ts": "node node_modules/typescript/bin/tsc -w",
+    "start:server": "node node_modules/typescript/bin/tsc && node server.js",
+    "install:web": "cd web && npm install",
+    "start:web": "cd web && ng serve -o"
   },
   "author": "",
   "license": "ISC",
