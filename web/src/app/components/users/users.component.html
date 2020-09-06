@@ -1,0 +1,5 @@
+<ul class="list-group">
+    <li class="list-group-item list-group-item-action flex-column align-items-start"
+        (dblclick)="markUser(user)"
+        *ngFor="let user of users">{{user.name}}</li>
+</ul>

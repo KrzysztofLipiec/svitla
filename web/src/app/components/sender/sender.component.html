@@ -1,0 +1,19 @@
+<div class="sender">
+    <div class="md-form input-form">
+        <input type="text"
+               [(ngModel)]="message"
+               #messageInput
+               mdbInput
+               (keyup.enter)="sendMessage()"
+               autofocus
+               class="form-control"
+               id="messageInput">
+        <label for='messageInput'>Send Message</label>
+    </div>
+    <button type="button"
+            mdbBtn
+            class="btn-sm"
+            color="success"
+            (click)="sendMessage()"
+            mdbWavesEffect>Send</button>
+</div>

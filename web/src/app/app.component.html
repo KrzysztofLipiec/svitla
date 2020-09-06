@@ -1,0 +1,48 @@
+<div class="chat">
+    <div class="chat-header indigo">
+        <h2>Chat</h2>
+    </div>
+    <div class="chat-content">
+        <app-messages></app-messages>
+    </div>
+    <div class="chat-side indigo">
+        <app-users></app-users>
+    </div>
+    <div class="chat-input">
+        <app-sender></app-sender>
+    </div>
+    <mdb-card class="chat-register"
+              *ngIf="!user.id">
+        <mdb-card-header class="info-color white-text text-center py-4">
+            <h5>
+                <strong>Sign up</strong>
+            </h5>
+        </mdb-card-header>
+
+        <!--Card content-->
+        <mdb-card-body class="px-lg-5 pt-0">
+            <div class="form-row">
+                <div class="col">
+                    <!-- First name -->
+                    <div class="md-form">
+                        <input type="text"
+                               id="materialRegisterFormFirstName"
+                               class="form-control"
+                               [(ngModel)]="signName"
+                               mdbInput>
+                        <label for="materialRegisterFormFirstName">First name</label>
+                    </div>
+                </div>
+            </div>
+            <button mdbBtn
+                    color="info"
+                    outline="true"
+                    rounded="true"
+                    block="true"
+                    class="my-4 waves-effect z-depth-0"
+                    mdbWavesEffect
+                    (click)="signIn()"
+                    type="submit">Sign in</button>
+        </mdb-card-body>
+    </mdb-card>
+</div>

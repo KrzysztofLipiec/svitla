@@ -1,0 +1,9 @@
+<ul class="messages list-group list-group-flush">
+    <li class="list-group-item"
+        [ngClass]="{'list-group-item-success': (currentUser | async).id === message.user.id}"
+        *ngFor="let message of messages">
+        <span>({{message.date| date:'HH:mm:ss'}})</span>
+        <span class="messages-user-name">{{message.user.name}}</span>
+        <span>{{message.message}}</span>
+    </li>
+</ul>
